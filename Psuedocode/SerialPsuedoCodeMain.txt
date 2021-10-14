@@ -1,9 +1,15 @@
-tablerow = 1000
-tablecol = 1000
-table[tablerow][tablecol]
+int tablerow = 1000
+int tablecol = 1000
+int table[][]
 gens = N
 
-iteration = 0
+int function(int twoDtable[][], int tablerow, int tablecol)
+
+int main()
+{
+
+
+}
 
 
 

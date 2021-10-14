@@ -1,0 +1,14 @@
+int outputArray(int tablerow, int twoDArray[][])
+
+int outputArray(int tablerow, int twoDArray[][])
+{
+    print("What's inside the table: ")
+    for(int i = 0; i < tablerow; i++)
+    {
+        for(int j = 0; j < tablecol; j++)
+        {
+            print(twoDArray[i][j] + " ")
+        }
+    }
+
+}

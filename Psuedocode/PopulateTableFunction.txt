@@ -1,7 +1,15 @@
-int function(int 2dtable[][], int tablerow, int tablecol, int generations)
+int createTable(int twoDtable[][], int tablerow, int tablecol)
 
-int function(int 2dtable[][], int tablerow, int tablecol, int generations)
+int createTable(int twoDtable[][], int tablerow, int tablecol)
 {
-    for (generations = 0; generations < )
+    for (int i = 0; i < tablerow; i++)
+    {
+        for (int j = 0; j < tablecol; j++)
+        {
+            twoDtable[i][j] = i + j 
+        }
+    }
+
+    return twoDtable
 
 }
