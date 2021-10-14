@@ -1,0 +1,11 @@
+tablerow = 1000
+tablecol = 1000
+table[tablerow][tablecol]
+gens = N
+
+iteration = 0
+
+
+
+
+
