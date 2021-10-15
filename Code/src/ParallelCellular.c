@@ -1,26 +1,27 @@
-]#include <pthread.h>
+#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-typdef struct table
+typdef struct Tables
 {
     int rows;
     int cols;
     int **data;
-} table;
+} Table;
 
 void *maxthread(void *arg)
 {
-    table t = *((table *)arg);
+    Table t = *((Table *)arg);
     for(int i = 0; i < t.rows; i++)
     {
         for(int j = 0; j < t.cols; j++)
         {
             printf("%2d", t.data[i][j]);
         }
-        printf("");
+        puts("");
     }
-    printf("");
+    puts("");
     return NULL;
 }
 
@@ -28,7 +29,7 @@ int main()
 {
     int thread_count = 4;
     pthread_t = threads[thread_count];
-    table t;
+    Table t;
 
     t.rows = 10;
     t.cols = 10;
@@ -36,7 +37,7 @@ int main()
 
     for(int i = 0; i < t.rows; i++)
     {
-        t.data[i] = mallod(sizeof(int) * t.cols);
+        t.data[i] = malloc(sizeof(int) * t.cols);
         for(int j = 0; j < t.cols; j++)
         {
             t.data[i][j] = i * j;
@@ -47,6 +48,7 @@ int main()
     {
         free(t.data[i]);
     }
+
     free(t.data[i]);
     return 0;
 }
