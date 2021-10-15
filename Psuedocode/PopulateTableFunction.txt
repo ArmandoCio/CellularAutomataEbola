@@ -1,15 +1,28 @@
-int createTable(int twoDtable[][], int tablerow, int tablecol)
+#include <unistd.h>  
+#include <pthread.h>
+  
+void *maxthread(void *arg)
 
-int createTable(int twoDtable[][], int tablerow, int tablecol)
+typedef struct table
 {
-    for (int i = 0; i < tablerow; i++)
+    int rows;
+    int cols;
+    in **data'
+} table;
+
+void *maxthread(void *arg)
+{
+    table t = *((matrix *)arg);
+
+    for(int i = 0; i < t.rows; i++) 
     {
-        for (int j = 0; j < tablecol; j++)
+        for(int j = 0; j < t.cols; t++) 
         {
-            twoDtable[i][j] = i + j 
+            printf("%2d", t.data[i][j]);
         }
+        // Puts a an empty string space
+        puts("");
     }
-
-    return twoDtable
-
-}
+    puts("");
+    return NULL;
+}    
