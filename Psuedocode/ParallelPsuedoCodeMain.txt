@@ -1,3 +1,5 @@
+]This code is formatted specifically for C, another text file will contain less C formatting
+
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,9 +21,9 @@ void *maxthread(void *arg)
         {
             printf("%2d", t.data[i][j]);
         }
-        printf("");
+        puts("");
     }
-    printf("");
+    puts("");
     return NULL;
 }
 
