@@ -1,0 +1,71 @@
+//Include necessary libraries
+
+// Declare the thread count
+pthread max threads
+
+// Macros for rows and columns
+table rows 1000
+table columns 1000
+
+// Global multidimensional table array variable
+int table[columns][rows]
+
+int main()
+{
+    //initialize each cell on the table with random state between 0 and 1 
+    for (int x = 0; x < columns; x++)
+    {
+        for (int y = 0; y < rows; y++)
+        {
+            int current[x][y] = random number betwen 0 and 1
+        }
+    }
+
+    int nextgeneration[columns][rows]
+
+    // Loop that skips edge cells and loops the generations 
+    for (int x = 1; x < columns; x++)
+    {
+        for (int y = 1; y < rows; y++)
+        {
+
+            // Calculates the number of alive neighbours
+            int neighbours = 0;
+            for (int i = -1; i <= 1; i++)
+            {
+                for (int j = -1; j <= 1; j++)
+                {
+                    neighbours += table[x + i][y = j]
+                }
+            }
+
+            // Subtract the cells state so it doesn't count as a neighbour
+            neighbours -= table[x][y]
+
+            //Conditions for the rules susceptible, infected, dead, recovered
+            if ((table[x][y] == 1) && (neighbours < 2))
+            {
+                nextgeneration[x][y] = 0
+            }
+            else if((table[x][y] == 1) && (neighbours > 3))
+            {
+                nextgeneration[x][y] = 0
+            }
+            else if((table[x][y]) && (neighbours == 3))
+            {
+                nextgeneration[x][y] = 1
+            }
+            else
+            {
+                nextgeneration[x][y] = table[x][y];
+            }
+
+        }
+
+    }
+    table = nextgeneration
+    
+
+}
+
+
