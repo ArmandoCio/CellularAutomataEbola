@@ -1,8 +1,5 @@
 //Include necessary libraries
 
-// Declare the thread count
-pthread max threads
-
 // Macros for rows and columns
 table rows 1000
 table columns 1000
